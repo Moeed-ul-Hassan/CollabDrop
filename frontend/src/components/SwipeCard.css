@@ -1,0 +1,174 @@
+/* Redesigned SwipeCard for the Monochromatic SaaS Aesthetic */
+.swipe-card {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    /* Make it fit the container well */
+    border-radius: var(--br-lg);
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+    cursor: grab;
+    will-change: transform;
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.swipe-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-dark);
+}
+
+.swipe-card:active {
+    cursor: grabbing;
+}
+
+/* Portfolio Header Space */
+.card-image {
+    width: 100%;
+    height: 45%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid var(--border-light);
+    background-color: var(--bg-tertiary);
+    /* Clean fallback */
+}
+
+/* No more extreme gradient overlay, just a very subtle vignette if needed */
+.card-gradient-overlay {
+    display: none;
+}
+
+/* The Data Area */
+.card-info {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.card-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card-header .niche-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Data Grid for Metrics */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: var(--br-md);
+    border: 1px solid var(--border-light);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metric-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+.tag {
+    background: var(--bg-tertiary);
+    padding: 4px 10px;
+    border-radius: var(--br-md);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Professional Pass / Interested Stamps */
+.stamp {
+    position: absolute;
+    top: 30px;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid;
+    border-radius: var(--br-md);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    opacity: 0;
+    background-color: var(--bg-primary);
+    /* Solid bg to cover image behind it */
+}
+
+.stamp.like {
+    left: 30px;
+    color: var(--success);
+    border-color: var(--success);
+    transform: rotate(-10deg);
+    box-shadow: var(--shadow-md);
+}
+
+.stamp.nope {
+    right: 30px;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+    transform: rotate(10deg);
+    box-shadow: var(--shadow-md);
+}
