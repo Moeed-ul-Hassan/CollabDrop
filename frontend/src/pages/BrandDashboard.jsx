@@ -11,7 +11,8 @@ export default function BrandDashboard() {
     const { token, logout, user } = useAuth();
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/profiles', {
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+        fetch(`${apiUrl}/api/profiles`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -32,7 +33,8 @@ export default function BrandDashboard() {
         setProfiles((prev) => prev.filter((p) => p.id !== id));
 
         try {
-            await fetch('http://localhost:8080/api/swipe', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+            await fetch(`${apiUrl}/api/swipe`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

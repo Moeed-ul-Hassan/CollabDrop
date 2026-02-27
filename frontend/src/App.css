@@ -314,7 +314,8 @@
   flex-direction: column;
   gap: 2rem;
   box-shadow: var(--shadow-block-lg);
-  border: 2px solid var(--border-dark); /* Bold border for retro look */
+  border: 2px solid var(--border-dark);
+  /* Bold border for retro look */
 }
 
 .auth-header {
@@ -606,7 +607,8 @@
 }
 
 .glass-panel {
-  background: var(--bg-primary); /* Remove glass effect for solid retro block */
+  background: var(--bg-primary);
+  /* Remove glass effect for solid retro block */
   border: 2px solid var(--border-dark);
   box-shadow: var(--shadow-block-md);
 }
@@ -859,7 +861,8 @@
   position: absolute;
   top: 15%;
   right: -2rem;
-  background-color: #fde047; /* Yellow 300 */
+  background-color: #fde047;
+  /* Yellow 300 */
   color: #111827;
   padding: 0.75rem 3rem 0.75rem 2rem;
   transform: rotate(6deg) translateY(0);
@@ -867,7 +870,7 @@
   font-size: 0.95rem;
   text-decoration: none;
   z-index: 50;
-  box-shadow: 6px 6px 0px rgba(0,0,0,1);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
   border: 2px solid #000;
   clip-path: polygon(2% 0%, 100% 4%, 98% 100%, 0% 96%);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -879,13 +882,14 @@
 
 .yellow-paint-banner:hover {
   transform: rotate(3deg) translateY(-5px) scale(1.05);
-  box-shadow: 8px 8px 0px rgba(0,0,0,1);
-  background-color: #fef08a; /* Lighter yellow */
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+  background-color: #fef08a;
+  /* Lighter yellow */
 }
 
 .yellow-paint-banner:active {
   transform: rotate(6deg) translateY(2px) scale(0.95);
-  box-shadow: 2px 2px 0px rgba(0,0,0,1);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 .yellow-paint-banner .banner-text {
@@ -901,12 +905,14 @@
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-align: center;
-  margin-bottom: -1rem; /* Pull up towards the form slightly */
+  margin-bottom: -1rem;
+  /* Pull up towards the form slightly */
 }
 
 .admin-hint p {
   margin: 0.25rem 0;
 }
+
 .admin-hint strong {
   color: var(--text-primary);
   display: block;

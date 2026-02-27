@@ -56,9 +56,9 @@ export default function LandingPage() {
             <section className="hero-creative">
 
                 {/* Micro Interaction: Yellow Paint Banner */}
-                <motion.a 
-                    href="https://github.com/Moeed-ul-Hassan/" 
-                    target="_blank" 
+                <motion.a
+                    href="https://github.com/Moeed-ul-Hassan/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="yellow-paint-banner"
                     initial={{ x: 100, opacity: 0 }}

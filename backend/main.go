@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"collabdrop-backend/db"
 	"collabdrop-backend/handlers"
@@ -36,9 +37,13 @@ func main() {
 	// Apply CORS middleware globally
 	handler := corsMiddleware(mux)
 
-	port := ":8080"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	fmt.Println("Backend server listening on port", port)
-	if err := http.ListenAndServe(port, handler); err != nil {
+	if err := http.ListenAndServe(":"+port, handler); err != nil {
 		log.Fatal(err)
 	}
 }
